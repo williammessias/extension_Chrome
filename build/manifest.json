@@ -1,0 +1,26 @@
+{
+  "name": "Gmail Email Templates",
+  "description": "Create new templates to email reply",
+  "version": "0.1",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://mail.google.com/*",
+        "https://inbox.google.com/*"
+      ],
+      "all_frames": true,
+      "js": ["inboxsdk.js","bundle.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": [
+    "storage"
+  ],
+  "manifest_version": 2,
+  "web_accessible_resources": [
+    "list-256x256.png", "*.svg"
+    ],
+  "icons": { 
+    "128": "new-post.jpeg"
+  }
+}
